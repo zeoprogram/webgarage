@@ -1,47 +1,69 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const menuButton = document.getElementById("menuButton");
-    const navMenu = document.querySelector(".nav-menu");
+    const menuButton =
+        document.getElementById("menuButton");
 
-    const notification = document.getElementById("notification");
+    const navigation =
+        document.getElementById("navigation");
+
+    const serviceButtons =
+        document.querySelectorAll(".service-button");
+
+    const contactButton =
+        document.getElementById("contactButton");
+
+    const notification =
+        document.getElementById("notification");
+
     const notificationText =
         document.getElementById("notificationText");
 
     const closeNotification =
         document.getElementById("closeNotification");
 
-    const contactButton =
-        document.getElementById("contactButton");
-
-    const serviceButtons =
-        document.querySelectorAll(".service-button");
-
     const year =
         document.getElementById("year");
 
 
-    /* TAHUN FOOTER */
+    /* TAHUN */
 
     if (year) {
-        year.textContent = new Date().getFullYear();
+        year.textContent =
+            new Date().getFullYear();
     }
 
 
-    /* MENU MOBILE */
+    /* MENU */
 
-    if (menuButton && navMenu) {
+    if (menuButton && navigation) {
 
-        menuButton.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
-        });
+        menuButton.addEventListener(
+            "click",
+            function () {
 
-        navMenu.querySelectorAll("a").forEach(function (link) {
+                navigation.classList.toggle("active");
 
-            link.addEventListener("click", function () {
-                navMenu.classList.remove("active");
+            }
+        );
+
+
+        navigation
+            .querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navigation.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
             });
 
-        });
     }
 
 
@@ -49,56 +71,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showNotification(message) {
 
-        if (!notification || !notificationText) {
+        if (!notification ||
+            !notificationText) {
             return;
         }
 
-        notificationText.textContent = message;
+        notificationText.textContent =
+            message;
 
         notification.classList.add("show");
 
+
         setTimeout(function () {
-            notification.classList.remove("show");
-        }, 4000);
+
+            notification.classList.remove(
+                "show"
+            );
+
+        }, 3500);
+
     }
 
 
-    /* TOMBOL LAYANAN */
+    /* LAYANAN */
 
-    serviceButtons.forEach(function (button) {
+    serviceButtons.forEach(
+        function (button) {
 
-        button.addEventListener("click", function () {
+            button.addEventListener(
+                "click",
+                function () {
 
-            const service =
-                button.getAttribute("data-service");
+                    const service =
+                        button.getAttribute(
+                            "data-service"
+                        );
 
-            showNotification(
-                "Layanan " +
-                service +
-                " dipilih."
+                    showNotification(
+                        "Anda memilih layanan: " +
+                        service
+                    );
+
+                }
             );
 
-        });
+        }
+    );
 
-    });
 
-
-    /* TOMBOL KONTAK */
+    /* KONTAK */
 
     if (contactButton) {
 
-        contactButton.addEventListener("click", function () {
+        contactButton.addEventListener(
+            "click",
+            function () {
 
-            showNotification(
-                "Silakan tambahkan informasi kontak WebGarage."
-            );
+                showNotification(
+                    "Silakan tambahkan nomor WhatsApp atau informasi kontak Anda pada script.js."
+                );
 
-        });
+            }
+        );
 
     }
 
 
-    /* TUTUP NOTIFIKASI */
+    /* CLOSE NOTIFICATION */
 
     if (closeNotification) {
 
@@ -106,7 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
             "click",
             function () {
 
-                notification.classList.remove("show");
+                notification.classList.remove(
+                    "show"
+                );
 
             }
         );

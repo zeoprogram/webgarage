@@ -11,22 +11,24 @@
 
 <body>
 
-    <header class="navbar">
-        <div class="container nav-content">
-            <a href="index.html" class="logo">
+    <header class="header">
+        <div class="container">
+
+            <div class="logo">
                 WebGarage
-            </a>
+            </div>
 
-            <nav class="nav-menu">
-                <a href="#home">Beranda</a>
-                <a href="#layanan">Layanan</a>
-                <a href="#tentang">Tentang</a>
-                <a href="#kontak">Kontak</a>
-            </nav>
-
-            <button id="menuButton" class="menu-button" type="button">
+            <button id="menuButton" class="menu-button">
                 ☰
             </button>
+
+            <nav id="navigation">
+                <a href="#home">Home</a>
+                <a href="#services">Layanan</a>
+                <a href="#about">Tentang</a>
+                <a href="#contact">Kontak</a>
+            </nav>
+
         </div>
     </header>
 
@@ -34,79 +36,68 @@
     <main>
 
         <section id="home" class="hero">
-            <div class="container hero-content">
 
-                <div class="hero-text">
-                    <p class="small-title">SELAMAT DATANG DI</p>
+            <div class="container">
 
-                    <h1>
-                        WebGarage
-                    </h1>
+                <p class="label">
+                    WEBGARAGE
+                </p>
 
-                    <p class="hero-description">
-                        Platform website garage yang sederhana,
-                        modern, dan mudah digunakan.
-                    </p>
+                <h1>
+                    Solusi Digital<br>
+                    Untuk Garage Anda
+                </h1>
 
-                    <div class="hero-buttons">
-                        <a href="#layanan" class="button primary">
-                            Lihat Layanan
-                        </a>
+                <p class="description">
+                    WebGarage adalah website sederhana untuk
+                    memberikan informasi layanan garage secara
+                    cepat dan mudah.
+                </p>
 
-                        <a href="#kontak" class="button secondary">
-                            Hubungi Kami
-                        </a>
-                    </div>
+                <div class="buttons">
+
+                    <a href="#services" class="button button-primary">
+                        Lihat Layanan
+                    </a>
+
+                    <a href="#contact" class="button button-secondary">
+                        Hubungi Kami
+                    </a>
+
                 </div>
 
             </div>
+
         </section>
 
 
-        <section id="layanan" class="section">
+        <section id="services" class="section">
+
             <div class="container">
 
-                <div class="section-title">
-                    <p class="small-title">LAYANAN</p>
+                <div class="section-heading">
+
+                    <p class="label">
+                        LAYANAN
+                    </p>
 
                     <h2>
-                        Layanan WebGarage
+                        Layanan Kami
                     </h2>
 
                     <p>
-                        Informasi dan layanan garage dalam satu website.
+                        Pilih layanan yang Anda butuhkan.
                     </p>
+
                 </div>
 
 
-                <div class="service-grid">
+                <div class="cards">
 
-                    <article class="service-card">
-                        <div class="service-icon">
+                    <div class="card">
+
+                        <div class="icon">
                             🔧
-                        </div>
-
-                        <h3>
-                            Perawatan Kendaraan
-                        </h3>
-
-                        <p>
-                            Informasi layanan perawatan dan pemeriksaan
-                            kendaraan.
-                        </p>
-
-                        <button
-                            class="service-button"
-                            type="button"
-                            data-service="Perawatan Kendaraan">
-                            Pilih Layanan
-                        </button>
-                    </article>
-
-
-                    <article class="service-card">
-                        <div class="service-icon">
-                            🚗
                         </div>
 
                         <h3>
@@ -114,21 +105,46 @@
                         </h3>
 
                         <p>
-                            Membantu pelanggan mendapatkan informasi
-                            mengenai kebutuhan servis kendaraan.
+                            Layanan pemeriksaan dan perawatan
+                            kendaraan.
                         </p>
 
                         <button
                             class="service-button"
-                            type="button"
                             data-service="Servis Kendaraan">
                             Pilih Layanan
                         </button>
-                    </article>
+
+                    </div>
 
 
-                    <article class="service-card">
-                        <div class="service-icon">
+                    <div class="card">
+
+                        <div class="icon">
+                            🚗
+                        </div>
+
+                        <h3>
+                            Perawatan
+                        </h3>
+
+                        <p>
+                            Membantu menjaga kendaraan tetap
+                            dalam kondisi baik.
+                        </p>
+
+                        <button
+                            class="service-button"
+                            data-service="Perawatan">
+                            Pilih Layanan
+                        </button>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="icon">
                             🛠️
                         </div>
 
@@ -137,100 +153,120 @@
                         </h3>
 
                         <p>
-                            Pemeriksaan kondisi kendaraan sebelum
-                            dilakukan perbaikan.
+                            Pemeriksaan kondisi kendaraan secara
+                            menyeluruh.
                         </p>
 
                         <button
                             class="service-button"
-                            type="button"
                             data-service="Pemeriksaan">
                             Pilih Layanan
                         </button>
-                    </article>
+
+                    </div>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <section id="tentang" class="section section-light">
-            <div class="container about">
+        <section id="about" class="section about">
 
-                <div>
-                    <p class="small-title">
-                        TENTANG
-                    </p>
+            <div class="container">
 
-                    <h2>
-                        Tentang WebGarage
-                    </h2>
-                </div>
+                <div class="about-content">
 
-                <div>
-                    <p>
-                        WebGarage adalah website yang dibuat untuk
-                        memberikan informasi dan mempermudah pengguna
-                        dalam mengakses layanan garage.
-                    </p>
+                    <div>
 
-                    <p>
-                        Website ini menggunakan HTML, CSS, dan JavaScript
-                        sehingga dapat dijalankan langsung melalui
-                        GitHub Pages.
-                    </p>
+                        <p class="label">
+                            TENTANG
+                        </p>
+
+                        <h2>
+                            Tentang WebGarage
+                        </h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <p>
+                            WebGarage dibuat sebagai platform
+                            sederhana yang dapat digunakan untuk
+                            menampilkan informasi mengenai garage
+                            dan layanan yang tersedia.
+                        </p>
+
+                        <p>
+                            Website ini dibuat menggunakan HTML,
+                            CSS, dan JavaScript sehingga dapat
+                            dijalankan langsung menggunakan
+                            GitHub Pages.
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
+
         </section>
 
 
-        <section id="kontak" class="section">
+        <section id="contact" class="section">
+
             <div class="container contact">
 
-                <div class="section-title">
-                    <p class="small-title">
-                        KONTAK
-                    </p>
+                <p class="label">
+                    KONTAK
+                </p>
 
-                    <h2>
-                        Hubungi WebGarage
-                    </h2>
+                <h2>
+                    Hubungi Kami
+                </h2>
 
-                    <p>
-                        Silakan gunakan tombol di bawah untuk menghubungi
-                        kami.
-                    </p>
-                </div>
+                <p>
+                    Klik tombol di bawah untuk menghubungi
+                    WebGarage.
+                </p>
 
                 <button
                     id="contactButton"
-                    class="button primary"
-                    type="button">
+                    class="button button-primary">
                     Hubungi Kami
                 </button>
 
             </div>
+
         </section>
 
     </main>
 
 
-    <footer class="footer">
+    <footer>
+
         <div class="container">
+
             <p>
-                © <span id="year"></span> WebGarage. All Rights Reserved.
+                © <span id="year"></span> WebGarage
             </p>
+
         </div>
+
     </footer>
 
 
     <div id="notification" class="notification">
+
         <span id="notificationText"></span>
-        <button id="closeNotification" type="button">
+
+        <button id="closeNotification">
             ×
         </button>
+
     </div>
 
 
